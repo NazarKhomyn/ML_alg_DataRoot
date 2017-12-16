@@ -130,11 +130,11 @@ class SVMTrainer(object):
 
         # Check this
 
-           # # -a_i \leq 0
+        # -a_i \leq 0
         # G_std = cvxopt.matrix(np.diag(np.ones(n_samples) * -1))
         # h_std = cvxopt.matrix(np.zeros(n_samples))
 
-            # # a_i \leq c
+        # # a_i \leq c
         # G_slack = cvxopt.matrix(np.diag(np.ones(n_samples)))
         # h_slack = cvxopt.matrix(np.ones(n_samples) * self._c)
 

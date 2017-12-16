@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.spatial import distance
 
 
 class Kernel(object):
@@ -9,4 +10,4 @@ class Kernel(object):
 
     @staticmethod
     def gaussian(sigma):
-        pass
+        return lambda x, y: np.exp(- distance.euclidean(x,y) ** 2 / (2 * sigma ** 2))
